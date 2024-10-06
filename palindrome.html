@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+                 //1234321 is a palindrome Number
+function checkpalindrome()
+{
+    let n=Number(prompt("enter a number"));
+    let originalNum=n;
+    let reverse=0;
+    //logic
+    do{
+    let rem=n%10; //last digit
+    reverse=(reverse*10)+rem;  //start building reverse number
+        n=Math.floor(n/10);  //remove last digit
+    }while(n>0);
+
+
+        if(originalNum==reverse)
+        {
+        alert(originalNum+" is palindrome");
+        }
+        else{
+            alert(originalNum+" is not palindrome");
+        }
+    }
+</script>
+</head>
+<body>
+<button onclick="checkpalindrome()">click</button>
+</body>
+</html>
