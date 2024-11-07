@@ -10,19 +10,20 @@
              alert("factorial of" + num+"is" + result);
             }
 
-            var fact=1;
+            
             var i;
             var num;
            
             function factorial(num)
             {
+                var fact=1; //if fact is declared outside function,then it will never delete the previously calculated value of fact for other num
                 for(i=1;i<=num;i++)
             {
                 fact=fact*i;
             }
             return fact;
             }
-            console.log("factorial of num=" +fact);
+            
         </script>
         <body>
             <p>please provide the value for calculating factorial</p>
